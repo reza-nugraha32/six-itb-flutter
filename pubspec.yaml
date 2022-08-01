@@ -1,5 +1,5 @@
-name: testproject
-description: A new Flutter project.
+name: SIX
+description: A project for submission to Flutter development course bringing ITB's academic information system 'SIX' to an android app
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
