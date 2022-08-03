@@ -58,9 +58,18 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
-  #   - images/a_dot_ham.jpeg
+  assets:
+     - asset/images/SIX-title.svg
+     - asset/images/menu-class.svg
+     - asset/images/menu-curriculum.svg
+     - asset/images/menu-controlpanel.svg
+     - asset/images/menu-evaluation.svg
+     - asset/images/menu-financial.svg
+     - asset/images/menu-graduation.svg
+     - asset/images/menu-major.svg
+     - asset/images/menu-status.svg
+     - asset/images/menu-studyplan.svg
+  
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
