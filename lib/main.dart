@@ -41,7 +41,7 @@ class Home extends StatelessWidget {
                 end: Alignment.bottomCenter,
                 colors: [
                   Color(0xFF003366),
-                  Color(0xF5F5F5F5),
+                  Color(0xFFFFFFFF),
                 ],
               ),
             ),
@@ -60,13 +60,13 @@ class Home extends StatelessWidget {
                           width: 200,
                           child: Text('Selamat datang, Reza!',
                               style: TextStyle(
-                                  color: Color(0xF5F5F5F5),
+                                  color: Color(0xFFFFFFFF),
                                   fontWeight: FontWeight.w400,
                                   fontSize: 18)),
                         ),
                         Text('12321032 - S1 Teknik Geofisika',
                             style: TextStyle(
-                                color: Color(0xF5F5F5F5),
+                                color: Color(0xFFFFFFFF),
                                 fontWeight: FontWeight.w300,
                                 fontSize: 14)),
                       ],
@@ -74,67 +74,71 @@ class Home extends StatelessWidget {
                   ),
                   Container(
                     margin: EdgeInsets.fromLTRB(20, 5, 20, 5),
-                    width: 300,
-                    height: 90,
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                        image: AssetImage('asset/images/Background.png'),
-                        fit: BoxFit.fitWidth,
-                      ),
-                      boxShadow: [
-                        BoxShadow(
-                            color: Color(0xFF003366).withOpacity(0.5),
-                            spreadRadius: 2,
-                            blurRadius: 7,
-                            offset: Offset(0, 3))
-                      ],
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget>[
-                        Container(
-                          margin: EdgeInsets.fromLTRB(13, 0, 10, 5),
-                          child: Text('Kelas Yang Akan Datang',
-                              style: TextStyle(
-                                  color: Color(0xF5F5F5F5),
-                                  fontWeight: FontWeight.w500,
-                                  fontSize: 14)),
+                    child: Material(
+                      type: MaterialType.transparency,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20)),
+                      shadowColor: Color(0xFF2a2a2a),
+                      child: InkWell(
+                        onTap: () {},
+                        child: Ink(
+                          width: 300,
+                          height: 90,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              image: AssetImage('asset/images/Background.png'),
+                              fit: BoxFit.fitWidth,
+                            ),
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: <Widget>[
+                              Container(
+                                margin: EdgeInsets.fromLTRB(13, 0, 10, 5),
+                                child: Text('Kelas Yang Akan Datang',
+                                    style: TextStyle(
+                                        color: Color(0xFFFFFFFF),
+                                        fontWeight: FontWeight.w500,
+                                        fontSize: 14)),
+                              ),
+                              Container(
+                                  margin: EdgeInsets.fromLTRB(13, 0, 10, 0),
+                                  width: 300,
+                                  height: 20,
+                                  child: Text('Matematika IIA (MA1201)',
+                                      style: TextStyle(
+                                          color: Color(0xFFFFFFFF),
+                                          fontSize: 14,
+                                          fontWeight: FontWeight.w300))),
+                              Container(
+                                  margin: EdgeInsets.fromLTRB(13, 0, 0, 0),
+                                  decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(20),
+                                      color: Color(0xFF003366)),
+                                  width: 80,
+                                  height: 25,
+                                  child: Center(
+                                      child: Text(
+                                    '13.00-15.00',
+                                    style: TextStyle(
+                                        color: Color(0xFFFFFFFF),
+                                        fontSize: 12,
+                                        fontWeight: FontWeight.w500),
+                                  ))),
+                            ],
+                          ),
                         ),
-                        Container(
-                            margin: EdgeInsets.fromLTRB(13, 0, 10, 0),
-                            width: 300,
-                            height: 20,
-                            child: Text('Matematika IIA (MA1201)',
-                                style: TextStyle(
-                                    color: Color(0xF5F5F5F5),
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.w300))),
-                        Container(
-                            margin: EdgeInsets.fromLTRB(13, 0, 0, 0),
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(20),
-                                color: Color(0xFF003366)),
-                            width: 80,
-                            height: 25,
-                            child: Center(
-                                child: Text(
-                              '13.00-15.00',
-                              style: TextStyle(
-                                  color: Color(0xF5F5F5F5),
-                                  fontSize: 12,
-                                  fontWeight: FontWeight.w500),
-                            ))),
-                      ],
+                      ),
                     ),
                   ),
                   Container(
                     margin: EdgeInsets.fromLTRB(20, 5, 20, 5),
                     width: 300,
-                    height: 380,
+                    height: 400,
                     decoration: BoxDecoration(
-                        color: Color(0xF5F5F5F5),
+                        color: Colors.white,
                         borderRadius: BorderRadius.circular(20),
                         boxShadow: [
                           BoxShadow(
@@ -157,231 +161,294 @@ class Home extends StatelessWidget {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: <Widget>[
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: <Widget>[
-                                Container(
-                                    margin: EdgeInsets.fromLTRB(10, 10, 10, 10),
-                                    width: 50,
-                                    height: 50,
-                                    child: Image.asset(
-                                        'asset/images/menu-curriculum.png')),
-                                Center(
-                                    child: Container(
-                                  width: 70,
-                                  height: 40,
-                                  child: Text('Kurikulum',
-                                      textAlign: TextAlign.center,
-                                      style: TextStyle(
-                                        color: Color(0xFF2a2a2a),
-                                        fontWeight: FontWeight.w500,
-                                        fontSize: 12,
-                                      )),
-                                )),
-                              ],
-                            ),
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: <Widget>[
-                                Container(
-                                    margin: EdgeInsets.fromLTRB(10, 10, 10, 10),
-                                    width: 50,
-                                    height: 50,
-                                    child: Image.asset(
-                                        'asset/images/menu-status.png')),
-                                Center(
-                                    child: Container(
-                                  width: 70,
-                                  height: 40,
-                                  child: Text('Status Mahasiswa',
-                                      textAlign: TextAlign.center,
-                                      style: TextStyle(
-                                        color: Color(0xFF2a2a2a),
-                                        fontWeight: FontWeight.w500,
-                                        fontSize: 12,
-                                      )),
-                                )),
-                              ],
-                            ),
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: <Widget>[
-                                Container(
-                                    margin: EdgeInsets.fromLTRB(13, 10, 10, 10),
-                                    width: 50,
-                                    height: 50,
-                                    child: Image.asset(
-                                        'asset/images/menu-financial.png')),
-                                Center(
-                                    child: Container(
-                                  width: 70,
-                                  height: 40,
-                                  child: Text('Keuangan & Beasiswa',
-                                      textAlign: TextAlign.center,
-                                      style: TextStyle(
-                                          color: Color(0xFF2a2a2a),
-                                          fontWeight: FontWeight.w500,
-                                          fontSize: 12)),
-                                )),
-                              ],
-                            ),
-                          ],
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: <Widget>[
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: <Widget>[
-                                Container(
-                                    margin: EdgeInsets.fromLTRB(10, 10, 10, 10),
-                                    width: 50,
-                                    height: 50,
-                                    child: Image.asset(
-                                        'asset/images/menu-class.png')),
-                                Center(
-                                    child: Container(
-                                  width: 70,
-                                  height: 40,
-                                  child: Text('Kelas',
-                                      textAlign: TextAlign.center,
-                                      style: TextStyle(
-                                        color: Color(0xFF2a2a2a),
-                                        fontWeight: FontWeight.w500,
-                                        fontSize: 12,
-                                      )),
-                                )),
-                              ],
-                            ),
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: <Widget>[
-                                Container(
-                                    margin: EdgeInsets.fromLTRB(10, 10, 10, 10),
-                                    width: 50,
-                                    height: 50,
-                                    child: Image.asset(
-                                        'asset/images/menu-studyplan.png')),
-                                Center(
-                                    child: Container(
-                                  width: 70,
-                                  height: 40,
-                                  child: Text('Rencana Studi & Perwalian',
-                                      textAlign: TextAlign.center,
-                                      style: TextStyle(
-                                        color: Color(0xFF2a2a2a),
-                                        fontWeight: FontWeight.w500,
-                                        fontSize: 12,
-                                      )),
-                                )),
-                              ],
-                            ),
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: <Widget>[
-                                Container(
-                                    margin: EdgeInsets.fromLTRB(10, 10, 10, 10),
-                                    width: 50,
-                                    height: 50,
-                                    child: Image.asset(
-                                        'asset/images/menu-major.png')),
-                                Center(
-                                    child: Container(
-                                  width: 70,
-                                  height: 40,
-                                  child: Text('Penjurusan TPB',
-                                      textAlign: TextAlign.center,
-                                      style: TextStyle(
-                                        color: Color(0xFF2a2a2a),
-                                        fontWeight: FontWeight.w500,
-                                        fontSize: 12,
-                                      )),
-                                )),
-                              ],
-                            ),
-                          ],
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: <Widget>[
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: <Widget>[
-                                Container(
-                                    margin: EdgeInsets.fromLTRB(10, 10, 10, 10),
-                                    width: 50,
-                                    height: 50,
-                                    child: Image.asset(
-                                        'asset/images/menu-evaluation.png')),
-                                Center(
-                                    child: Container(
-                                  width: 70,
-                                  height: 40,
-                                  child:
-                                      Text('Evaluasi Perkuliahan & Portofolio',
+                            Material(
+                              type: MaterialType.transparency,
+                              child: InkWell(
+                                onTap: () {},
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: <Widget>[
+                                    Container(
+                                        margin:
+                                            EdgeInsets.fromLTRB(0, 10, 0, 10),
+                                        width: 50,
+                                        height: 50,
+                                        child: Image.asset(
+                                            'asset/images/menu-curriculum.png')),
+                                    Center(
+                                        child: Container(
+                                      width: 80,
+                                      height: 50,
+                                      child: Text('Kurikulum',
                                           textAlign: TextAlign.center,
                                           style: TextStyle(
                                             color: Color(0xFF2a2a2a),
                                             fontWeight: FontWeight.w500,
                                             fontSize: 12,
                                           )),
-                                )),
-                              ],
+                                    )),
+                                  ],
+                                ),
+                              ),
                             ),
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: <Widget>[
-                                Container(
-                                    margin: EdgeInsets.fromLTRB(10, 10, 10, 10),
-                                    width: 50,
-                                    height: 50,
-                                    child: Image.asset(
-                                        'asset/images/menu-graduation.png')),
-                                Center(
-                                    child: Container(
-                                  width: 70,
-                                  height: 40,
-                                  child: Text('Wisuda',
-                                      textAlign: TextAlign.center,
-                                      style: TextStyle(
-                                        color: Color(0xFF2a2a2a),
-                                        fontWeight: FontWeight.w500,
-                                        fontSize: 12,
-                                      )),
-                                )),
-                              ],
+                            Material(
+                              type: MaterialType.transparency,
+                              child: InkWell(
+                                onTap: () {},
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: <Widget>[
+                                    Container(
+                                        margin:
+                                            EdgeInsets.fromLTRB(0, 10, 0, 10),
+                                        width: 50,
+                                        height: 50,
+                                        child: Image.asset(
+                                            'asset/images/menu-status.png')),
+                                    Center(
+                                        child: Container(
+                                      width: 80,
+                                      height: 50,
+                                      child: Text('Status Mahasiswa',
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                            color: Color(0xFF2a2a2a),
+                                            fontWeight: FontWeight.w500,
+                                            fontSize: 12,
+                                          )),
+                                    )),
+                                  ],
+                                ),
+                              ),
                             ),
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: <Widget>[
-                                Container(
-                                    margin: EdgeInsets.fromLTRB(10, 10, 10, 10),
-                                    width: 50,
-                                    height: 50,
-                                    child: Image.asset(
-                                        'asset/images/menu-controlpanel.png')),
-                                Center(
-                                    child: Container(
-                                  width: 70,
-                                  height: 40,
-                                  child: Text('Control Panel',
-                                      textAlign: TextAlign.center,
-                                      style: TextStyle(
-                                        color: Color(0xFF2a2a2a),
-                                        fontWeight: FontWeight.w500,
-                                        fontSize: 12,
-                                      )),
-                                )),
-                              ],
+                            Material(
+                              type: MaterialType.transparency,
+                              child: InkWell(
+                                onTap: () {},
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: <Widget>[
+                                    Container(
+                                        margin:
+                                            EdgeInsets.fromLTRB(0, 10, 0, 10),
+                                        width: 50,
+                                        height: 50,
+                                        child: Image.asset(
+                                            'asset/images/menu-financial.png')),
+                                    Center(
+                                        child: Container(
+                                      width: 80,
+                                      height: 50,
+                                      child: Text('Keuangan & Beasiswa',
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                              color: Color(0xFF2a2a2a),
+                                              fontWeight: FontWeight.w500,
+                                              fontSize: 12)),
+                                    )),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: <Widget>[
+                            Material(
+                              type: MaterialType.transparency,
+                              child: InkWell(
+                                onTap: () {},
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: <Widget>[
+                                    Container(
+                                        margin:
+                                            EdgeInsets.fromLTRB(0, 10, 0, 10),
+                                        width: 50,
+                                        height: 50,
+                                        child: Image.asset(
+                                            'asset/images/menu-class.png')),
+                                    Center(
+                                        child: Container(
+                                      width: 80,
+                                      height: 50,
+                                      child: Text('Kelas',
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                            color: Color(0xFF2a2a2a),
+                                            fontWeight: FontWeight.w500,
+                                            fontSize: 12,
+                                          )),
+                                    )),
+                                  ],
+                                ),
+                              ),
+                            ),
+                            Material(
+                              type: MaterialType.transparency,
+                              child: InkWell(
+                                onTap: () {},
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: <Widget>[
+                                    Container(
+                                        margin:
+                                            EdgeInsets.fromLTRB(0, 10, 0, 10),
+                                        width: 50,
+                                        height: 50,
+                                        child: Image.asset(
+                                            'asset/images/menu-studyplan.png')),
+                                    Center(
+                                        child: Container(
+                                      width: 80,
+                                      height: 50,
+                                      child: Text('Rencana Studi & Perwalian',
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                            color: Color(0xFF2a2a2a),
+                                            fontWeight: FontWeight.w500,
+                                            fontSize: 12,
+                                          )),
+                                    )),
+                                  ],
+                                ),
+                              ),
+                            ),
+                            Material(
+                              type: MaterialType.transparency,
+                              child: InkWell(
+                                onTap: () {},
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: <Widget>[
+                                    Container(
+                                        margin:
+                                            EdgeInsets.fromLTRB(0, 10, 0, 10),
+                                        width: 50,
+                                        height: 50,
+                                        child: Image.asset(
+                                            'asset/images/menu-major.png')),
+                                    Center(
+                                        child: Container(
+                                      width: 80,
+                                      height: 50,
+                                      child: Text('Penjurusan TPB',
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                            color: Color(0xFF2a2a2a),
+                                            fontWeight: FontWeight.w500,
+                                            fontSize: 12,
+                                          )),
+                                    )),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: <Widget>[
+                            Material(
+                              type: MaterialType.transparency,
+                              child: InkWell(
+                                onTap: () {},
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: <Widget>[
+                                    Container(
+                                        margin:
+                                            EdgeInsets.fromLTRB(0, 10, 0, 10),
+                                        width: 50,
+                                        height: 50,
+                                        child: Image.asset(
+                                            'asset/images/menu-evaluation.png')),
+                                    Center(
+                                        child: Container(
+                                      width: 80,
+                                      height: 50,
+                                      child: Text(
+                                          'Evaluasi Perkuliahan & Portofolio',
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                            color: Color(0xFF2a2a2a),
+                                            fontWeight: FontWeight.w500,
+                                            fontSize: 12,
+                                          )),
+                                    )),
+                                  ],
+                                ),
+                              ),
+                            ),
+                            Material(
+                              type: MaterialType.transparency,
+                              child: InkWell(
+                                onTap: () {},
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: <Widget>[
+                                    Container(
+                                        margin:
+                                            EdgeInsets.fromLTRB(0, 10, 0, 10),
+                                        width: 50,
+                                        height: 50,
+                                        child: Image.asset(
+                                            'asset/images/menu-graduation.png')),
+                                    Center(
+                                        child: Container(
+                                      width: 80,
+                                      height: 50,
+                                      child: Text('Wisuda',
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                            color: Color(0xFF2a2a2a),
+                                            fontWeight: FontWeight.w500,
+                                            fontSize: 12,
+                                          )),
+                                    )),
+                                  ],
+                                ),
+                              ),
+                            ),
+                            Material(
+                              type: MaterialType.transparency,
+                              child: InkWell(
+                                onTap: () {},
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: <Widget>[
+                                    Container(
+                                        margin:
+                                            EdgeInsets.fromLTRB(0, 10, 0, 10),
+                                        width: 50,
+                                        height: 50,
+                                        child: Image.asset(
+                                            'asset/images/menu-controlpanel.png')),
+                                    Center(
+                                        child: Container(
+                                      width: 80,
+                                      height: 50,
+                                      child: Text('Control Panel',
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                            color: Color(0xFF2a2a2a),
+                                            fontWeight: FontWeight.w500,
+                                            fontSize: 12,
+                                          )),
+                                    )),
+                                  ],
+                                ),
+                              ),
                             ),
                           ],
                         ),
