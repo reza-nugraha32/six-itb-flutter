@@ -15,19 +15,15 @@ class MyTheme {
     final ThemeData base = ThemeData.light();
 
     return base.copyWith(
-      accentColor: PrimaryColor,
-      accentColorBrightness: Brightness.dark,
       primaryColor: PrimaryColor,
       primaryColorDark: PrimaryDark,
       primaryColorLight: PrimaryColorLight,
-      primaryColorBrightness: Brightness.dark,
       buttonTheme: base.buttonTheme.copyWith(
         buttonColor: PrimaryColor,
         textTheme: ButtonTextTheme.primary,
       ),
       scaffoldBackgroundColor: Background,
       cardColor: Background,
-      textSelectionColor: PrimaryColorLight,
       backgroundColor: Background,
     );
   }

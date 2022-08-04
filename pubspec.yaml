@@ -1,4 +1,4 @@
-name: SIX
+name: app_six
 description: A project for submission to Flutter development course bringing ITB's academic information system 'SIX' to an android app
 
 # The following line prevents the package from being accidentally published to
@@ -59,16 +59,17 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-     - asset/images/SIX-title.svg
-     - asset/images/menu-class.svg
-     - asset/images/menu-curriculum.svg
-     - asset/images/menu-controlpanel.svg
-     - asset/images/menu-evaluation.svg
-     - asset/images/menu-financial.svg
-     - asset/images/menu-graduation.svg
-     - asset/images/menu-major.svg
-     - asset/images/menu-status.svg
-     - asset/images/menu-studyplan.svg
+     - asset/images/Background.png
+     - asset/images/SIX-title.png
+     - asset/images/menu-class.png
+     - asset/images/menu-curriculum.png
+     - asset/images/menu-controlpanel.png
+     - asset/images/menu-evaluation.png
+     - asset/images/menu-financial.png
+     - asset/images/menu-graduation.png
+     - asset/images/menu-major.png
+     - asset/images/menu-status.png
+     - asset/images/menu-studyplan.png
   
 
   # An image asset can refer to one or more resolution-specific "variants", see
