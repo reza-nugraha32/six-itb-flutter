@@ -508,7 +508,7 @@ class _State extends State<studyplanPage> {
                                         style: ElevatedButton.styleFrom(
                                             primary: Color(0xFF003366),
                                             padding: EdgeInsets.fromLTRB(
-                                                5, 10, 5, 10)),
+                                                10, 10, 10, 10)),
                                         onPressed: () {
                                           _controller.clear();
                                         },
