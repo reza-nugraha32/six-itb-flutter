@@ -1,5 +1,8 @@
 import 'dart:ui';
-
+import 'class_page.dart';
+import 'status_page.dart';
+import 'curriculum_page.dart';
+import 'studyplan_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import './themes/AppColor.dart';
@@ -23,14 +26,20 @@ class Home extends StatelessWidget {
           backgroundColor: Color(0xFF174574),
           title: const Text('SIX'),
           actions: <Widget>[
-            IconButton(
-              icon: const Icon(CupertinoIcons.chevron_down),
-              onPressed: () {},
+            Container(
+              margin: EdgeInsets.fromLTRB(10, 0, 0, 0),
+              child: IconButton(
+                icon: const Icon(CupertinoIcons.chevron_down),
+                onPressed: () {},
+              ),
             ),
-            IconButton(
-              icon: const Icon(CupertinoIcons.person_alt_circle),
-              onPressed: () {},
-            ),
+            Container(
+              margin: EdgeInsets.fromLTRB(5, 0, 10, 0),
+              child: IconButton(
+                icon: const Icon(CupertinoIcons.person_alt_circle),
+                onPressed: () {},
+              ),
+            )
           ],
         ),
         body: Center(
@@ -82,7 +91,12 @@ class Home extends StatelessWidget {
                         type: MaterialType.transparency,
                         child: InkWell(
                           borderRadius: BorderRadius.circular(20),
-                          onTap: () {},
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                CupertinoPageRoute(
+                                    builder: (context) => classPage()));
+                          },
                           child: Ink(
                             width: 300,
                             height: 90,
@@ -110,7 +124,8 @@ class Home extends StatelessWidget {
                                     margin: EdgeInsets.fromLTRB(13, 0, 10, 0),
                                     width: 300,
                                     height: 20,
-                                    child: Text('Matematika IIA (MA1201)',
+                                    child: Text(
+                                        'TG2105 Komputasi Geofisika (Kuliah)',
                                         style: TextStyle(
                                             color: Color(0xFFFFFFFF),
                                             fontSize: 14,
@@ -124,7 +139,7 @@ class Home extends StatelessWidget {
                                     height: 25,
                                     child: Center(
                                         child: Text(
-                                      '13.00-15.00',
+                                      '09.00-11.00',
                                       style: TextStyle(
                                           color: Color(0xFFFFFFFF),
                                           fontSize: 12,
@@ -166,7 +181,13 @@ class Home extends StatelessWidget {
                               Material(
                                 type: MaterialType.transparency,
                                 child: InkWell(
-                                  onTap: () {},
+                                  onTap: () {
+                                    Navigator.push(
+                                        context,
+                                        CupertinoPageRoute(
+                                            builder: (context) =>
+                                                curriculumPage()));
+                                  },
                                   child: Column(
                                     crossAxisAlignment:
                                         CrossAxisAlignment.center,
@@ -198,7 +219,13 @@ class Home extends StatelessWidget {
                               Material(
                                 type: MaterialType.transparency,
                                 child: InkWell(
-                                  onTap: () {},
+                                  onTap: () {
+                                    Navigator.push(
+                                        context,
+                                        CupertinoPageRoute(
+                                            builder: (context) =>
+                                                statusPage()));
+                                  },
                                   child: Column(
                                     crossAxisAlignment:
                                         CrossAxisAlignment.center,
@@ -266,7 +293,12 @@ class Home extends StatelessWidget {
                               Material(
                                 type: MaterialType.transparency,
                                 child: InkWell(
-                                  onTap: () {},
+                                  onTap: () {
+                                    Navigator.push(
+                                        context,
+                                        CupertinoPageRoute(
+                                            builder: (context) => classPage()));
+                                  },
                                   child: Column(
                                     crossAxisAlignment:
                                         CrossAxisAlignment.center,
@@ -298,7 +330,13 @@ class Home extends StatelessWidget {
                               Material(
                                 type: MaterialType.transparency,
                                 child: InkWell(
-                                  onTap: () {},
+                                  onTap: () {
+                                    Navigator.push(
+                                        context,
+                                        CupertinoPageRoute(
+                                            builder: (context) =>
+                                                studyplanPage()));
+                                  },
                                   child: Column(
                                     crossAxisAlignment:
                                         CrossAxisAlignment.center,
