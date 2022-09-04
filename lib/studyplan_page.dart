@@ -8,10 +8,16 @@ void main() {
   runApp(const Home());
 }
 
-class studyplanPage extends StatelessWidget {
+var _controller = TextEditingController();
+
+class studyplanPage extends StatefulWidget {
   const studyplanPage({Key? key}) : super(key: key);
 
   @override
+  _State createState() => _State();
+}
+
+class _State extends State<studyplanPage> {
   Widget build(BuildContext context) {
     return MaterialApp(
         title: 'Rencana Studi dan Perwalian',
@@ -449,6 +455,65 @@ class studyplanPage extends StatelessWidget {
                                                 fontWeight: FontWeight.w500,
                                                 fontSize: 14)),
                                       ),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          Container(
+                            margin: EdgeInsets.fromLTRB(20, 5, 20, 5),
+                            width: 300,
+                            decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(20),
+                                boxShadow: [
+                                  BoxShadow(
+                                      color: Color(0xFF2a2a2a).withOpacity(0.2),
+                                      spreadRadius: 3,
+                                      blurRadius: 7,
+                                      offset: Offset(0, 3))
+                                ]),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                Container(
+                                  margin: EdgeInsets.fromLTRB(13, 10, 10, 0),
+                                  child: Text('Percakapan dengan Dosen Wali',
+                                      style: TextStyle(
+                                          color: Color(0xFF2a2a2a),
+                                          fontWeight: FontWeight.w700,
+                                          fontSize: 16)),
+                                ),
+                                Container(
+                                  margin: EdgeInsets.fromLTRB(13, 10, 13, 10),
+                                  child: TextField(
+                                    controller: _controller,
+                                    decoration: InputDecoration(
+                                      border: OutlineInputBorder(
+                                          borderRadius:
+                                              BorderRadius.circular(10)),
+                                      hintText: 'Ketik pesan',
+                                      fillColor: Color(0xFF9cafc2),
+                                    ),
+                                  ),
+                                ),
+                                Container(
+                                  margin: EdgeInsets.fromLTRB(13, 0, 13, 10),
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.end,
+                                    children: [
+                                      ElevatedButton(
+                                        style: ElevatedButton.styleFrom(
+                                            primary: Color(0xFF003366),
+                                            padding: EdgeInsets.fromLTRB(
+                                                5, 10, 5, 10)),
+                                        onPressed: () {
+                                          _controller.clear();
+                                        },
+                                        child: Text('Kirim'),
+                                      )
                                     ],
                                   ),
                                 ),
