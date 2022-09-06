@@ -30,7 +30,7 @@ class _State extends State<studyplanPage> {
               leading: IconButton(
                 icon: Icon(CupertinoIcons.chevron_left),
                 onPressed: () {
-                  Navigator.push(context,
+                  Navigator.pop(context,
                       CupertinoPageRoute(builder: (context) => Home()));
                 },
               ),

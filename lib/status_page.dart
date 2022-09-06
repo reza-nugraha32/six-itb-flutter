@@ -24,7 +24,7 @@ class statusPage extends StatelessWidget {
               leading: IconButton(
                 icon: Icon(CupertinoIcons.chevron_left),
                 onPressed: () {
-                  Navigator.push(context,
+                  Navigator.pop(context,
                       CupertinoPageRoute(builder: (context) => Home()));
                 },
               ),
@@ -90,8 +90,7 @@ class statusPage extends StatelessWidget {
                                           fontSize: 16)),
                                 ),
                                 Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceAround,
+                                  mainAxisAlignment: MainAxisAlignment.start,
                                   children: [
                                     Column(
                                       crossAxisAlignment:
@@ -340,13 +339,14 @@ class statusPage extends StatelessWidget {
                                               fontSize: 16)),
                                     ),
                                     Container(
-                                      margin:
-                                          EdgeInsets.fromLTRB(13, 10, 10, 0),
-                                      child: Image.asset(
-                                        'asset/images/GPA-graph.png',
-                                        fit: BoxFit.fill,
-                                      ),
-                                    ),
+                                        margin:
+                                            EdgeInsets.fromLTRB(13, 10, 10, 10),
+                                        child: Center(
+                                          child: Image.asset(
+                                            'asset/images/GPA-graph.png',
+                                            height: 150,
+                                          ),
+                                        )),
                                   ])),
                         ]);
                   })),
