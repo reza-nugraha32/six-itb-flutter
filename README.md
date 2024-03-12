@@ -1,6 +1,6 @@
 # SIX project
 
-An Android front-end project for submission to Flutter development course bringing ITB's academic information system 'SIX' to an android app.
+Imagining ITB's academic information system 'SIX' as an Android app. A Flutter project for submission to the Flutter development course. 
 
 <img src="./screenshot/screenshot-1.jpg" width=250x>
 
